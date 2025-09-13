@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoolhub Attendance Tracker</title>
+  <link rel="stylesheet" href="index.css">
+  <script defer src="index.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome for icons -->
+</head>
+<body>
+  <div class="header">
+    <div class="title-section">
+      <h1 class="main-title">📘 Yoolhub Attendance Tracker</h1>
+      <p class="class-info">Class WD-B1 (10/8/2025)</p>
+    </div>
+    <button class="save-btn" onclick="saveAttendance()">💾 Save Attendance</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box">
+      <i class="fas fa-users"></i>
+      <h3 id="total">0</h3>
+      <p>Total Students</p>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-check-circle" style="color:#28a745;"></i>
+      <h3 id="present">0</h3>
+      <p>Present</p>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-clock" style="color:#ffc107;"></i>
+      <h3 id="late">0</h3>
+      <p>Late</p>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-times-circle" style="color:#dc3545;"></i>
+      <h3 id="absent">0</h3>
+      <p>Absent</p>
+    </div>
+  </div>
+  
+
+  <div class="students" id="studentList"></div>
+  <!-- Add Student Button -->
+  <div style="text-align:center; margin-top:20px;">
+    <button class="save-btn" onclick="addStudent()">➕ Add Student</button>
+</body>
+</html>
