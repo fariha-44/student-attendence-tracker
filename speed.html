@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog System</title>
+
+  <!-- Add Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ6H7z8kL5+u7onPRNG6G3qq3eT+J5GqBFi2N1yXQ" crossorigin="anonymous">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-align: center;
+      background-image: url('./download\ \(2\).jpeg');
+      color: white;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    header {
+      color: black;
+      padding: 1em;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    nav a {
+      color: black;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      background-color: blue;
+      color: white;
+    }
+
+    #loginForm, form {
+      padding: 2em;
+      border-radius: 7px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      text-align: left;
+      color: black;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    #createPost, #postList {
+      margin: 2em;
+    }
+
+    input, textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 1em;
+      padding: 10px;
+      font-size: 1.2em;
+      color: black;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: blue;
+    }
+
+    .form-label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#createPost">Abuur Mowduuc</a></li>
+        <li><a href="#postList">Mowduuca La Daabacay</a></li>
+        <li><a href="#loginForm">Gal Nidaamka</a></li>
+      </ul>
+    </nav>
+    <h1>Blog Post</h1>
+    <button id="logoutBtn" style="display: none;" onclick="logout()">Ka Bax</button>
+  </header>
+
+  <main>
+    <!-- Login Form -->
+    <section id="loginForm">
+      <h2>Enter User Information</h2>
+      <form id="login" class="form-group">
+        <div class="mb-3">
+          <label for="username" class="form-label">Magacaaga</label>
+          <input type="text" class="form-control" id="username" placeholder="Magacaaga" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password" required>
+        </div>
+
+        <!-- Gender Selection (Dropdown) -->
+        <div class="mb-3">
+          <label for="gender" class="form-label">Gender</label>
+          <select class="form-select" id="gender" required>
+            <option value="Rag">Male</option>
+            <option value="Dumar">Female</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Xaree-Xogta</button>
+      </form>
+    </section>
+
+    <br>
+
+    <!-- Create Post Form -->
+    <section id="createPost" style="display: none;">
+      <h2>Qor Mowduuc Cusub</h2>
+      <p id="welcomeMsg"></p>
+      <form id="postForm" class="form-group">
+        <div class="mb-3">
+          <label for="postTitle" class="form-label">Cinwaanka Mowduucaga</label>
+          <input type="text" class="form-control" id="postTitle" placeholder="Cinwaanka Mowduucaga" required>
+        </div>
+        
+        <div class="mb-3">
+          <label for="postContent" class="form-label">Mowduucaga</label>
+          <textarea class="form-control" id="postContent" placeholder="Mowduucaga" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-success">Daabac</button>
+      </form>
+    </section>
+
+    <br>
+    <!-- Post List -->
+    <section id="postList">
+      <h2>Mowduuyada La Daabacay</h2>
+      <div id="posts"></div>
+    </section>
+
+  </main>
+
+  <script src="blog system.js"></script>
+  <!-- Add Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.0/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
